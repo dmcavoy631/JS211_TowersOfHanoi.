@@ -35,9 +35,7 @@ let stacks = {
 
 //TEST for Winner
 const winner = [4, 3, 2, 1];
-//   b: [4, 3, 2, 1],
-//   c: [4, 3, 2, 1]
-// };
+
 
 const printStacks = () => {
   console.log("a: " + stacks.a);
@@ -46,12 +44,11 @@ const printStacks = () => {
 }
 
 const isLegal = (startStack, endStack) => {
-  // Get length of object array's and set last value for IF Condition
-  let x;
-  x = stacks[startStack].length;
-  x = x - 1; // adjust to end posistion
-  let startValue = stacks[startStack][x];
 
+  // Pop last value to variable
+  let startValue = stacks[startStack].pop();
+
+  // Determine if end stack is empty  (undefined)
   let y;
   y = stacks[endStack].length;
   if (y != undefined) {
@@ -59,21 +56,18 @@ const isLegal = (startStack, endStack) => {
   }
 
   let endValue = stacks[endStack][y];
-  // return console.log(x.length + " " + y.length);
-  // return console.log(xValue + " " + yValue);
+
 
 //IF true call movePiece
 if (startValue <  endValue || endValue == undefined){
     movePiece(startValue, startStack, endStack);
-    // return console.log(startValue + " is the less then " + endValue)
   } else {
     return console.log(startValue + " is NOT less then " + endValue +" That move not allowed")
   }
 }
 
-const movePiece = (startValue, startStack, endStack) => {
+const movePiece = (startValue, endStack) => {
   //Move pieces
-  stacks[startStack].pop();  // pop last value
   stacks[endStack].push(startValue); //push last value from parameter
 
 }

@@ -1,0 +1,72 @@
+.interface{
+  /* display: flex;  */
+}
+
+.MessageBox{
+  width: 400px;
+  height: 50px;
+  background-color: lightblue;
+  border: solid black 3px;
+  margin-bottom: 2%;
+}
+.currentPiece{
+  width: 400px;
+  height: 50px;
+  display: flex;
+  background-color: lightblue;
+  border: solid black 3px;
+  margin-bottom: 2%;
+}
+
+.TowerFlexArea{
+  display: flex;
+  background: deepskyblue;
+  justify-content: space-around;
+}
+
+.Tower{
+  width: 250px;
+  height: 250px;
+  background-color: lightblue;
+  border: solid black 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.gamePieceA
+{
+  height: 35px;
+  width: 50px;
+  background-color: red;
+  border: solid black 3px;
+  border-radius: 35%;
+}
+
+.gamePieceB
+{
+  height: 35px;
+  width: 100px;
+  background-color: green;
+  border: solid black 3px;
+  border-radius: 35%;
+}
+
+.gamePieceC
+{
+  height: 35px;
+  width: 150px;
+  background-color: blue;
+  border: solid black 3px;
+  border-radius: 35%;
+}
+
+.gamePieceD
+{
+  height: 35px;
+  width: 200px;
+  background-color: gold;
+  border: solid black 3px;
+  border-radius: 35%;
+}
